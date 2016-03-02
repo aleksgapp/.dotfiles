@@ -2,7 +2,7 @@
 export ZSH=/Users/aleksgapp/.oh-my-zsh
 
 # Look in ~/.oh-my-zsh/themes/
-ZSH_THEME="robbyrussell"
+ZSH_THEME="apple"
 
 ENABLE_CORRECTION="true"
 
