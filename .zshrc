@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/aleksgapp/.oh-my-zsh
+export ZSH=~/.dotfiles/oh-my-zsh
 
 # Look in ~/.oh-my-zsh/themes/
 ZSH_THEME="apple"
@@ -10,14 +10,14 @@ COMPLETION_WAITING_DOTS="true"
 
 plugins=(git)
 
+source $ZSH/oh-my-zsh.sh
 
 export PATH="/opt/local/bin:/opt/local/sbin:~/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 
-source $ZSH/oh-my-zsh.sh
-source ~/.functions
-source ~/.aliases
+source ~/.dotfiles/.functions
+source ~/.dotfiles/.aliases
 
-# export LANG=en_US.UTF-8
+export LANG=en_US.UTF-8
 # export ARCHFLAGS="-arch x86_64"
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 

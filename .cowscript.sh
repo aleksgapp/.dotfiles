@@ -1,0 +1,160 @@
+#!/bin/bash
+RANGE=46
+
+number=$RANDOM
+let "number %= $RANGE"
+case $number in
+    0)
+        cow="beavis.zen"
+        ;;
+    1)
+        cow="bong"
+        ;;
+    2)
+        cow="bud-frogs"
+        ;;
+    3)
+        cow="bunny"
+        ;;
+	4)
+        cow="cheese"
+        ;;
+    5)
+        cow="cower"
+        ;;
+    6)
+        cow="daemon"
+        ;;
+    7)
+        cow="default"
+        ;;
+	8)
+        cow="dragon"
+        ;;
+    9)
+        cow="dragon-and-cow"
+        ;;
+    10)
+        cow="elephant"
+        ;;
+    11)
+        cow="elephant-in-snake"
+        ;;
+	12)
+        cow="eyes"
+        ;;
+    13)
+        cow="flaming-sheep"
+        ;;
+    14)
+        cow="ghostbusters"
+        ;;
+    15)
+        cow="head-in"
+        ;;
+	16)
+        cow="hellokitty"
+        ;;
+    17)
+        cow="kiss"
+        ;;
+	18)
+        cow="kitty"
+        ;;
+    19)
+        cow="koala"
+        ;;
+    20)
+        cow="kosh"
+        ;;
+    21)
+        cow="luke-koala"
+        ;;
+	22)
+        cow="meow"
+        ;;
+    23)
+        cow="milk"
+        ;;
+	24)
+        cow="moofasa"
+        ;;
+    25)
+        cow="moose"
+        ;;
+    26)
+        cow="mutilated"
+        ;;
+    27)
+        cow="ren"
+        ;;
+	28)
+        cow="satanic"
+        ;;
+    29)
+        cow="sheep"
+        ;;
+	30)
+        cow="skeleton"
+        ;;
+    31)
+        cow="small"
+        ;;
+    32)
+        cow="sodomized"
+        ;;
+    33)
+        cow="stegosaurus"
+        ;;
+	34)
+        cow="stimpy"
+        ;;
+    35)
+        cow="supermilker"
+        ;;
+	36)
+        cow="surgery"
+        ;;
+    37)
+        cow="telebears"
+        ;;
+    38)
+        cow="three-eyes"
+        ;;
+    39)
+        cow="turkey"
+        ;;
+   	40)
+        cow="turtle"
+        ;;
+    41)
+        cow="tux"
+        ;;
+	42)
+        cow="udder"
+        ;;
+    43)
+        cow="vader"
+        ;;
+    44)
+        cow="vader-koala"
+        ;;
+    45)
+        cow="www"
+        ;;
+esac
+
+RANGE=2
+number=$RANDOM
+let "number %= $RANGE"
+case $number in
+    0)
+        command="cowsay"
+        ;;
+    1)
+        command="cowthink"
+        ;;
+esac
+
+#man $(ls /usr/bin | shuf -n 1) | sed -n "/^NAME/ { n;p;q }" | $command -f $cow
+fortune -so | $command -f $cow
