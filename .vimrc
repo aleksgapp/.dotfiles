@@ -79,8 +79,13 @@ let g:airline#extensions#tabline#enabled=1
 
 let g:neocomplcache_enable_at_startup=1
 
+" Unite bindings and configuration settings
 nnoremap <C-p> :Unite file_rec/async<CR>
+
+let g:unite_source_rec_async_command = ['ack', '-f', '--nofilter']
 nnoremap <Space>/ :Unite grep:.<CR>
+
+nnoremap <space>s :Unite -quick-match buffer<cr>
 
 " <TAB>: completion.
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"">"">")>>>"
