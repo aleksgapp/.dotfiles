@@ -55,3 +55,6 @@
 [submodule ".vim/bundle/ack.vim"]
 	path = .vim/bundle/ack.vim
 	url = git@github.com:mileszs/ack.vim.git
+[submodule ".vim/bundle/vimux"]
+	path = .vim/bundle/vimux
+	url = git@github.com:benmills/vimux.git
