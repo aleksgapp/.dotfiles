@@ -79,6 +79,9 @@ let g:airline#extensions#tabline#enabled=1
 
 let g:neocomplcache_enable_at_startup=1
 
+nnoremap <C-p> :Unite file_rec/async<CR>
+nnoremap <Space>/ :Unite grep:.<CR>
+
 " <TAB>: completion.
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"">"">")>>>"
 
