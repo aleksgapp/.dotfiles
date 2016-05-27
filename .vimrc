@@ -78,6 +78,10 @@ let g:airline_there='solarized'
 let g:airline#extensions#tabline#enabled=1
 
 let g:neocomplcache_enable_at_startup=1
+let g:neocomplete#enable_at_startup = 1
+
+let g:syntastic_cpp_compiler = 'clang++'
+let g:syntastic_cpp_compiler_options = ' -std=c++11 -stdlib=libc++'
 
 " Unite bindings and configuration settings
 nnoremap <C-p> :Unite file_rec/async<CR>
