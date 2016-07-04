@@ -15,6 +15,7 @@ set ruler                       " Turn on the ruler
 set laststatus=2                " Enables airline all the time
 set showcmd                     " show command in bottom bar
 set wildmenu                    " visual autocomplete for command menu
+set ttyfast
 set lazyredraw                  " redraw only when needed to
 set showmatch                   " highlight matching [{()}]
 set visualbell                  " Use visual bell instead of beeping
@@ -77,6 +78,7 @@ let g:airline_powerline_fonts=1
 let g:airline_there='solarized'
 let g:airline#extensions#tabline#enabled=1
 
+" Use neocomplete.
 let g:neocomplcache_enable_at_startup=1
 let g:neocomplete#enable_at_startup = 1
 
