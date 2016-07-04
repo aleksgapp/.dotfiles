@@ -12,11 +12,12 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
-export PATH="/opt/local/bin:/opt/local/sbin:~/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+export PATH="$PATH:/opt/local/bin:/opt/local/sbin:~/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 
 source ~/.dotfiles/.functions
 source ~/.dotfiles/.aliases
 
+export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 # export ARCHFLAGS="-arch x86_64"
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
@@ -30,3 +31,8 @@ export PATH=$PATH:$GOROOT/bin
 
 # ~/.cowscript.sh
 
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+
+export PATH="$PATH:$HOME/Library/Haskell/bin"
