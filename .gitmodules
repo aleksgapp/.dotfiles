@@ -61,3 +61,6 @@
 [submodule ".vim/bundle/ag.vim"]
 	path = .vim/bundle/ag.vim
 	url = git@github.com:rking/ag.vim.git
+[submodule "lldbinit"]
+	path = lldbinit
+	url = git@github.com:deroko/lldbinit.git
