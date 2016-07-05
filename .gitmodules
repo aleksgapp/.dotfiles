@@ -64,3 +64,6 @@
 [submodule "lldbinit"]
 	path = lldbinit
 	url = git@github.com:deroko/lldbinit.git
+[submodule ".vim/bundle/ghcmod-vim"]
+	path = .vim/bundle/ghcmod-vim
+	url = git@github.com:eagletmt/ghcmod-vim.git
