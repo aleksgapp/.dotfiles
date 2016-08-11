@@ -78,10 +78,6 @@ let g:airline_powerline_fonts=1
 let g:airline_there='solarized'
 let g:airline#extensions#tabline#enabled=1
 
-" Use neocomplete.
-let g:neocomplcache_enable_at_startup=1
-let g:neocomplete#enable_at_startup = 1
-
 let g:syntastic_cpp_compiler = 'clang++'
 let g:syntastic_cpp_compiler_options = ' -std=c++11 -stdlib=libc++'
 
@@ -104,3 +100,6 @@ augroup project
 augroup END
 
 let &path.="/src/include,/usr/include/AL,"
+
+let g:ycm_global_ycm_extra_conf = "~/.dotfiles/.ycm_extra_conf.py"
+
