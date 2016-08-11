@@ -70,17 +70,42 @@ nnoremap gV `[v`]
 
 set backspace=indent,eol,start  " Make backspace work like most other apps
 
+
+" Buffer setup
+
+" This allows buffers to be hidden if you're modified a buffer.
+set hidden
+
+" To open a new empty buffer
+nmap <leader>T :enew<cr>
+
+" Move to the next buffer
+nmap <leader>l :bn<cr>
+
+" Move to the previous buffer
+nmap <leader>h :bp<cr>
+
+
+" Quickfix list
+
+nmap q[ :cprev<cr>
+nmap q] :cnext<cr>
+nmap qo :copen<cr>
+
+
 execute pathogen#infect()
 
 colorscheme solarized
 
 let g:airline_powerline_fonts=1
 let g:airline_there='solarized'
+
+" Enable the list of buffers
 let g:airline#extensions#tabline#enabled=1
 
-" Use neocomplete.
-let g:neocomplcache_enable_at_startup=1
-let g:neocomplete#enable_at_startup = 1
+" Show just a filename
+let g:airline#extensions#tabline#fnamemod = ':t'
+
 
 let g:syntastic_cpp_compiler = 'clang++'
 let g:syntastic_cpp_compiler_options = ' -std=c++11 -stdlib=libc++'
@@ -104,3 +129,4 @@ augroup project
 augroup END
 
 let &path.="/src/include,/usr/include/AL,"
+
