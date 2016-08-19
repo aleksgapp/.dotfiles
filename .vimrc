@@ -23,7 +23,7 @@ set mouse=a                     " Enable use of mouse for all modes
 set background=dark
 set list                        " Display unprintable characters f12 - switches
 set listchars=tab:\ \ ,eol:¬,trail:•,extends:>,precedes:<
-" set colorcolumn=110
+set colorcolumn=80
 " Searching
 
 
@@ -106,6 +106,7 @@ let g:airline#extensions#tabline#enabled=1
 " Show just a filename
 let g:airline#extensions#tabline#fnamemod = ':t'
 
+let g:ycm_always_populate_location_list = 1
 
 let g:syntastic_cpp_compiler = 'clang++'
 let g:syntastic_cpp_compiler_options = ' -std=c++11 -stdlib=libc++'
