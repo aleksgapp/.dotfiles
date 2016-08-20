@@ -98,7 +98,7 @@ execute pathogen#infect()
 colorscheme solarized
 
 let g:airline_powerline_fonts=1
-let g:airline_there='solarized'
+let g:airline_there='base16'
 
 " Enable the list of buffers
 let g:airline#extensions#tabline#enabled=1
