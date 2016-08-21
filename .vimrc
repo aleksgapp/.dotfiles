@@ -110,19 +110,26 @@ let g:ycm_always_populate_location_list = 1
 
 let g:syntastic_cpp_compiler = 'clang++'
 let g:syntastic_cpp_compiler_options = ' -std=c++11 -stdlib=libc++'
+let g:syntastic_javascript_checkers = ['eslint']
 
 " Unite bindings and configuration settings
 nnoremap <C-p> :Unite file_rec/async<CR>
 
 let g:unite_source_rec_async_command = ['ag', '--follow', '--nocolor', '--nogroup', '--hidden', '-g', '']
 nnoremap <Space>/ :Unite grep:.<CR>
-
 nnoremap <space>s :Unite -quick-match buffer<cr>
 
 " <TAB>: completion.
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"">"">")>>>"
 
 map <C-n> :NERDTreeToggle<CR>
+
+" Proper Ctags locations
+let g:tagbar_ctags_bin='/usr/local/bin/ctags'
+" Default is 40, seems too wide
+let g:tagbar_width=40
+" Display panel with y (or ,y)
+noremap <silent> <Leader>y :TagbarToggle<cr>
 
 augroup project
     autocmd!
