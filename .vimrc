@@ -112,13 +112,6 @@ let g:syntastic_cpp_compiler = 'clang++'
 let g:syntastic_cpp_compiler_options = ' -std=c++11 -stdlib=libc++'
 let g:syntastic_javascript_checkers = ['eslint']
 
-" Unite bindings and configuration settings
-nnoremap <C-p> :Unite file_rec/async<CR>
-
-let g:unite_source_rec_async_command = ['ag', '--follow', '--nocolor', '--nogroup', '--hidden', '-g', '']
-nnoremap <Space>/ :Unite grep:.<CR>
-nnoremap <space>s :Unite -quick-match buffer<cr>
-
 " <TAB>: completion.
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"">"">")>>>"
 
@@ -130,6 +123,27 @@ let g:tagbar_ctags_bin='/usr/local/bin/ctags'
 let g:tagbar_width=40
 " Display panel with y (or ,y)
 noremap <silent> <Leader>y :TagbarToggle<cr>
+
+" The Silver Searcher
+if executable('ag')
+  " Use ag over grep
+  set grepprg=ag\ --nogroup\ --nocolor
+  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+  " ag is fast enough that CtrlP doesn't need to cache
+  let g:ctrlp_use_caching = 0
+endif
+
+" bind K to grep word under cursor
+nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
+
+nnoremap <Leader>s :%s/\<<C-r><C-w>\>//g<Left><Left>
+
+" bind \ (backward slash) to grep shortcut
+nnoremap \ :Ag<SPACE>
+
+nnoremap <leader>sN :bufdo let b:syntastic_mode="passive"<cr>
+nnoremap <leader>sY :bufdo unlet b:syntastic_mode<cr>
 
 augroup project
     autocmd!
