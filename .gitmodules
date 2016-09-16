@@ -79,3 +79,15 @@
 [submodule "weed-master"]
 	path = weed-master
 	url = https://github.com/ronilaukkarinen/weed.git
+[submodule ".tmux/plugins/tmux-continuum"]
+	path = .tmux/plugins/tmux-continuum
+	url = git@github.com:tmux-plugins/tmux-continuum.git
+[submodule ".tmux/plugins/tmux-resurrect"]
+	path = .tmux/plugins/tmux-resurrect
+	url = git@github.com:tmux-plugins/tmux-resurrect.git
+[submodule ".vim/bundle/ctrlp.vim.git"]
+	path = .vim/bundle/ctrlp.vim.git
+	url = git@github.com:ctrlpvim/ctrlp.vim.git
+[submodule ".vim/bundle/vim-elixir"]
+	path = .vim/bundle/vim-elixir
+	url = git@github.com:elixir-lang/vim-elixir.git
