@@ -12,7 +12,7 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
-export PATH="$PATH:/opt/local/bin:/opt/local/sbin:~/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+export PATH="$PATH:/opt/local/bin:/opt/local/sbin:~/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin"
 
 source ~/.dotfiles/.functions
 source ~/.dotfiles/.aliases
