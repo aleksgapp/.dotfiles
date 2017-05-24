@@ -12,7 +12,7 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
-export PATH="$PATH:/opt/local/bin:/opt/local/sbin:~/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin"
+export PATH="$PATH:/opt/local/bin:/opt/local/sbin:$HOME/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin"
 
 source ~/.dotfiles/.functions
 source ~/.dotfiles/.aliases
@@ -28,6 +28,7 @@ export TERM=xterm-256color
 export GOROOT=/usr/local/go
 export GOPATH=~/Development
 export PATH=$PATH:$GOROOT/bin
+export EDITOR=`which vim`
 
 # ~/.cowscript.sh
 
@@ -35,4 +36,4 @@ export PATH=$PATH:$GOROOT/bin
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
-export PATH="$PATH:$HOME/Library/Haskell/bin"
+export PATH="$PATH:$HOME/Library/Haskell/bin:$HOME/Documents/arcanist/bin"

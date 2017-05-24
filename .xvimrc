@@ -1,0 +1,22 @@
+
+set cursorline                  " Highlight line with the cursor
+set showcmd                     " show command in bottom bar
+set showmatch                   " highlight matching [{()}]
+set list                        " Display unprintable characters f12 - switches
+set listchars=tab:\ \ ,eol:¬,trail:•,extends:>,precedes:<
+set colorcolumn=80
+
+set incsearch                   " search as characters are entered
+set hlsearch                    " highlight matches
+
+let mapleader=","               " leader is a comma
+
+" jk is escape
+inoremap jk <esc>
+inoremap kj <esc>
+
+noremap <leader><space> :nohlsearch<CR>
+
+" move to beginig/eng of line
+nnoremap B ^
+nnoremap E $
