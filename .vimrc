@@ -7,7 +7,6 @@ filetype off
 syntax on                       " Syntax highlighting
 filetype plugin indent on
 
-
 " UI Config
 set cursorline                  " Highlight line with the cursor
 set number                      " Enable line numbers
@@ -54,6 +53,9 @@ set tabstop=4                   " number of visual spaces per TAB
 set softtabstop=4               " number of spaces in TAB when editing
 set autoindent
 set shiftwidth=4
+
+" for cpp files, 2 spaces
+autocmd Filetype cpp setlocal ts=2 sw=2 expandtab
 
 " Bindings
 
@@ -111,6 +113,7 @@ let g:ycm_always_populate_location_list = 1
 let g:syntastic_cpp_compiler = 'clang++'
 let g:syntastic_cpp_compiler_options = ' -std=c++11 -stdlib=libc++'
 let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_enable_perl_checker = 1
 
 " <TAB>: completion.
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"">"">")>>>"
@@ -124,15 +127,14 @@ let g:tagbar_width=40
 " Display panel with y (or ,y)
 noremap <silent> <Leader>y :TagbarToggle<cr>
 
-" The Silver Searcher
-if executable('ag')
-  " Use ag over grep
-  set grepprg=ag\ --nogroup\ --nocolor
-  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
-  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
-  " ag is fast enough that CtrlP doesn't need to cache
+" Ripgrep
+if executable('rg')
+  set grepprg=rg\ --vimgrep
+  let g:ctrlp_user_command = 'rg %s --files --color=never --glob ""'
   let g:ctrlp_use_caching = 0
 endif
+
+set wildignore+=*/.git/*,*/tmp/*,*swp,*.min.js
 
 " bind K to grep word under cursor
 nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
@@ -151,4 +153,5 @@ augroup project
 augroup END
 
 let &path.="/src/include,/usr/include/AL,"
+let $PATH='$HOME/.cargo/bin:/usr/bin:/usr/local/bin:/bin:/usr/sbin:/sbin'
 
