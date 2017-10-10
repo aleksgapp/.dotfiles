@@ -131,18 +131,16 @@ noremap <silent> <Leader>y :TagbarToggle<cr>
 if executable('rg')
   set grepprg=rg\ --vimgrep
   let g:ctrlp_user_command = 'rg %s --files --color=never --glob ""'
-  let g:ctrlp_use_caching = 0
+  "let g:ctrlp_use_caching = 0
+  let g:ctrlp_lazy_update = 250
 endif
 
 set wildignore+=*/.git/*,*/tmp/*,*swp,*.min.js
 
-" bind K to grep word under cursor
-nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
-
 nnoremap <Leader>s :%s/\<<C-r><C-w>\>//g<Left><Left>
 
 " bind \ (backward slash) to grep shortcut
-nnoremap \ :Ag<SPACE>
+nnoremap \ :Rg<SPACE>
 
 nnoremap <leader>sN :bufdo let b:syntastic_mode="passive"<cr>
 nnoremap <leader>sY :bufdo unlet b:syntastic_mode<cr>
