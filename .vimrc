@@ -97,7 +97,7 @@ nmap qo :copen<cr>
 
 execute pathogen#infect()
 
-colorscheme solarized
+colorscheme nova
 
 let g:airline_powerline_fonts=1
 let g:airline_there='base16'
@@ -114,6 +114,7 @@ let g:syntastic_cpp_compiler = 'clang++'
 let g:syntastic_cpp_compiler_options = ' -std=c++11 -stdlib=libc++'
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_enable_perl_checker = 1
+let g:syntastic_swift_checkers = ['swiftpm']
 
 " <TAB>: completion.
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"">"">")>>>"

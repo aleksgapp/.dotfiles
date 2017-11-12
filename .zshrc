@@ -62,5 +62,3 @@ export PATH="$HOME/.cargo/bin:$PATH"
 
 export MPLBACKEND="module://itermplot"
 export PATH=/usr/local/share/python:$PATH
-
-. /Users/agaponov/Documents/torch-cl/install/bin/torch-activate
