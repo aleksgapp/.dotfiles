@@ -85,3 +85,6 @@
 [submodule ".vim/bundle/nova-vim"]
 	path = .vim/bundle/nova-vim
 	url = git@github.com:trevordmiller/nova-vim.git
+[submodule ".vim/bundle/vim-ripgrep"]
+	path = .vim/bundle/vim-ripgrep
+	url = git@github.com:jremmen/vim-ripgrep.git

@@ -87,6 +87,13 @@ nmap <leader>l :bn<cr>
 " Move to the previous buffer
 nmap <leader>h :bp<cr>
 
+" Go to just before the first non-blank text of the line
+inoremap II <Esc>I
+" Go to the end of the line
+inoremap AA <Esc>A
+" Start editing on the new line above the current line
+inoremap OO <Esc>O
+
 
 " Quickfix list
 
