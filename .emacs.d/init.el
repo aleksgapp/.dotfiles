@@ -1,6 +1,24 @@
 (require 'package)
-(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
+(add-to-list 'package-archives
+             '("melpa" . "https://melpa.org/packages/") t)
 (package-initialize)
+
+(when (not package-archive-contents)
+  (package-refresh-contents))
+
+(defvar my-packages
+  '(evil
+    key-chord
+    auto-complete
+    ido
+    cider
+    powerline
+    color-theme
+    powerline-evil))
+
+(dolist (p my-packages)
+  (when (not (package-installed-p p))
+    (package-install p)))
 
 ;; VIM simulation
 (require 'evil)
@@ -9,6 +27,9 @@
 (define-key evil-normal-state-map (kbd "C-j") 'evil-window-down)
 (define-key evil-normal-state-map (kbd "C-k") 'evil-window-up)
 (define-key evil-normal-state-map (kbd "C-l") 'evil-window-righ)
+
+(setenv "PATH" (concat (getenv "PATH") ":/usr/local/bin"))
+(setq exec-path (append exec-path '("/usr/local/bin")))
 
 ;; Required to make chord bindings
 (require 'key-chord)
@@ -36,11 +57,7 @@
 ;; highlight selected line
 (global-hl-line-mode 1)
 
-;; use dark solarized theme
-(color-theme-initialize)
-(color-theme-solarized-dark)
-
-(require 'powerline)
+(require 'powerline-evil)
 (powerline-evil-vim-color-theme)
 
 ;; line numbers
@@ -52,6 +69,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(custom-enabled-themes (quote (tango-dark)))
  '(custom-safe-themes
    (quote
     ("8db4b03b9ae654d4a57804286eb3e332725c84d7cdab38463cb6b97d5762ad26" default)))
