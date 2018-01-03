@@ -88,3 +88,6 @@
 [submodule ".vim/bundle/vim-ripgrep"]
 	path = .vim/bundle/vim-ripgrep
 	url = git@github.com:jremmen/vim-ripgrep.git
+[submodule ".vim/bundle/vim-fireplace"]
+	path = .vim/bundle/vim-fireplace
+	url = git://github.com/tpope/vim-fireplace.git
