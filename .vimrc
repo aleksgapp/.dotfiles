@@ -93,6 +93,7 @@ inoremap II <Esc>I
 inoremap AA <Esc>A
 " Start editing on the new line above the current line
 inoremap OO <Esc>O
+inoremap GG <Esc>la
 
 
 " Quickfix list
