@@ -43,9 +43,6 @@
 [submodule ".vim/bundle/ack.vim"]
 	path = .vim/bundle/ack.vim
 	url = git@github.com:mileszs/ack.vim.git
-[submodule ".vim/bundle/vimux"]
-	path = .vim/bundle/vimux
-	url = git@github.com:benmills/vimux.git
 [submodule "lldbinit"]
 	path = lldbinit
 	url = git@github.com:deroko/lldbinit.git
@@ -94,3 +91,15 @@
 [submodule ".vim/bundle/rainbow_parentheses.vim"]
 	path = .vim/bundle/rainbow_parentheses.vim
 	url = git@github.com:kien/rainbow_parentheses.vim.git
+[submodule ".vim/bundle/vim-dispatch"]
+	path = .vim/bundle/vim-dispatch
+	url = git@github.com:tpope/vim-dispatch.git
+[submodule ".vim/bundle/vim-salve"]
+	path = .vim/bundle/vim-salve
+	url = git://github.com/tpope/vim-salve.git
+[submodule ".vim/bundle/vim-eastwood"]
+	path = .vim/bundle/vim-eastwood
+	url = git@github.com:venantius/vim-eastwood.git
+[submodule ".vim/bundle/vim-projectionist"]
+	path = .vim/bundle/vim-projectionist
+	url = git://github.com/tpope/vim-projectionist.git
