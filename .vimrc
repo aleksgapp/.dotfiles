@@ -9,7 +9,7 @@ filetype plugin indent on
 
 " UI Config
 set cursorline                  " Highlight line with the cursor
-set number                      " Enable line numbers
+set number relativenumber       " Enable line numbers
 set ruler                       " Turn on the ruler
 set laststatus=2                " Enables airline all the time
 set showcmd                     " show command in bottom bar
@@ -53,6 +53,8 @@ set tabstop=4                   " number of visual spaces per TAB
 set softtabstop=4               " number of spaces in TAB when editing
 set autoindent
 set shiftwidth=4
+
+autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
 
 " for cpp files, 2 spaces
 autocmd Filetype cpp setlocal ts=2 sw=2 expandtab

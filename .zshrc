@@ -23,8 +23,9 @@ export LANG=en_US.UTF-8
 export TERM=xterm-256color
 
 # go-lang env
-export GOROOT=/usr/local/go
-export GOPATH=~/Development
+export GOPATH=$HOME/Development
+export GOROOT=/usr/local/opt/go/libexec
+export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOROOT/bin
 export EDITOR=`which vim`
 
@@ -59,3 +60,8 @@ _fzf_compgen_path() {
 _fzf_compgen_dir() {
   fd --type d --hidden --follow --exclude ".git" . "$1"
 }
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+eval $(thefuck --alias)
+source /Users/agaponov/Development/git-subrepo/.rc
