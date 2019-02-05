@@ -27,7 +27,7 @@ export GOPATH=$HOME/Development
 export GOROOT=/usr/local/opt/go/libexec
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOROOT/bin
-export EDITOR=`which vim`
+export EDITOR="mvim -v"
 
 # ~/.cowscript.sh
 
@@ -35,8 +35,9 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 export PATH="$PATH:$HOME/Library/Haskell/bin:$HOME/Documents/arcanist/bin"
-
 export PATH="$HOME/.cargo/bin:$PATH"
+
+export PYTHONPATH=$PYTHONPATH:$(xcode-select -p)/../SharedFrameworks/LLDB.framework/Resources/Python
 
 export MPLBACKEND="module://itermplot"
 export PATH=/usr/local/share/python:$PATH
@@ -65,3 +66,11 @@ _fzf_compgen_dir() {
 
 eval $(thefuck --alias)
 source /Users/agaponov/Development/git-subrepo/.rc
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/agaponov/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/agaponov/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/agaponov/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/agaponov/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+
+export FLUTTER_ROOT=/Users/agaponov/Documents/flutter

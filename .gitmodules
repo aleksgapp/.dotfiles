@@ -109,3 +109,6 @@
 [submodule ".vim/bundle/auto-pairs"]
 	path = .vim/bundle/auto-pairs
 	url = git@github.com:jiangmiao/auto-pairs.git
+[submodule ".vim/bundle/eregex.vim"]
+	path = .vim/bundle/eregex.vim
+	url = git@github.com:othree/eregex.vim.git

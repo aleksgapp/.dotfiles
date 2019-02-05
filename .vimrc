@@ -58,6 +58,8 @@ autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
 
 " for cpp files, 2 spaces
 autocmd Filetype cpp setlocal ts=2 sw=2 expandtab
+autocmd Filetype html setlocal ts=2 sw=2 expandtab
+autocmd Filetype js setlocal ts=2 sw=2 expandtab
 
 " Bindings
 
@@ -93,8 +95,6 @@ nmap <leader>h :bp<cr>
 inoremap II <Esc>I
 " Go to the end of the line
 inoremap AA <Esc>A
-" Start editing on the new line above the current line
-inoremap OO <Esc>O
 inoremap GG <Esc>la
 
 
@@ -109,6 +109,7 @@ execute pathogen#infect()
 
 colorscheme nova
 
+set guifont=Fira\ Code:h18
 let g:airline_powerline_fonts=1
 let g:airline_there='base16'
 
@@ -126,6 +127,9 @@ let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_enable_perl_checker = 1
 let g:syntastic_swift_checkers = ['swiftpm']
 let g:syntastic_clojure_checkers = ['eastwood']
+
+let g:eregex_default_enable = 0
+nnoremap <leader>/ :call eregex#toggle()<CR>
 
 " <TAB>: completion.
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"">"">")>>>"

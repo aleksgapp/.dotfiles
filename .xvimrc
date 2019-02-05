@@ -8,6 +8,7 @@ set colorcolumn=80
 
 set incsearch                   " search as characters are entered
 set hlsearch                    " highlight matches
+set number relativenumber       " Enable line numbers
 
 let mapleader=","               " leader is a comma
 
