@@ -112,3 +112,6 @@
 [submodule ".vim/bundle/eregex.vim"]
 	path = .vim/bundle/eregex.vim
 	url = git@github.com:othree/eregex.vim.git
+[submodule ".vim/bundle/vim-slumlord"]
+	path = .vim/bundle/vim-slumlord
+	url = git@github.com:scrooloose/vim-slumlord.git

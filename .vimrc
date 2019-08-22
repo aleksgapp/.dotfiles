@@ -56,6 +56,8 @@ set shiftwidth=4
 
 autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
 
+autocmd BufNewFile,BufRead BUCK,BUILD,*.BUILD,WORKSPACE,*.WORKSPACE,*.bzl set syntax=python
+
 " for cpp files, 2 spaces
 autocmd Filetype cpp setlocal ts=2 sw=2 expandtab
 autocmd Filetype html setlocal ts=2 sw=2 expandtab
@@ -107,7 +109,7 @@ nmap qo :copen<cr>
 
 execute pathogen#infect()
 
-colorscheme nova
+colorscheme srcery
 
 set guifont=Fira\ Code:h18
 let g:airline_powerline_fonts=1

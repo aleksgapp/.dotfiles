@@ -103,3 +103,5 @@ alias pi="pod install"
 alias sudo='nocorrect sudo'
 
 alias irssi='TERM=screen-256color irssi'
+
+alias code=''
